@@ -4,11 +4,7 @@ use std::fmt;
 use std::io::{self, Write};
 use std::prelude::v1::*;
 use std::rc::Rc;
-#[cfg(not(feature = "mesalock_sgx"))]
 use std::sync::Mutex;
-#[cfg(feature = "mesalock_sgx")]
-use std::sync::SgxMutex as Mutex;
-
 use log::Level;
 use termcolor::{self, ColorChoice, ColorSpec, WriteColor};
 
